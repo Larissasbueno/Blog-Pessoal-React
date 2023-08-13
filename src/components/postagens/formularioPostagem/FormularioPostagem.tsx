@@ -138,10 +138,10 @@ function FormularioPostagem() {
 
   return (
     <div className="container flex flex-col mx-auto items-center">
-      <h1 className="text-4xl text-center my-8">{id !== undefined ? 'Editar Postagem' : 'Cadastrar Postagem'}</h1>
+      <h1 className="text-4xl text-center text-cyan_950 my-8">{id !== undefined ? 'Editar Postagem' : 'Criar Postagem'}</h1>
 
       <form onSubmit={gerarNovaPostagem} className="flex flex-col w-1/2 gap-4">
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 text-cyan_700">
           <label htmlFor="titulo">Titulo da postagem</label>
           <input
             value={postagem.titulo}
@@ -153,7 +153,7 @@ function FormularioPostagem() {
             className="border-2 border-slate-700 rounded p-2"
           />
         </div>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 text-cyan_700">
           <label htmlFor="titulo">Texto da postagem</label>
           <input
             value={postagem.texto}
@@ -165,7 +165,7 @@ function FormularioPostagem() {
             className="border-2 border-slate-700 rounded p-2"
           />
         </div>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 text-cyan_700">
           <p>Tema da postagem</p>
           <select name="tema" id="tema" className='border p-2 border-slate-800 rounded' onChange={(e) => buscarTemaPorId(e.currentTarget.value)}>
             <option value="" selected disabled>Selecione um tema</option>
@@ -176,7 +176,9 @@ function FormularioPostagem() {
             ))}
           </select>
         </div>
-        <button disabled={carregandoTema} type='submit' className='rounded disabled:bg-slate-200 bg-indigo-400 hover:bg-indigo-800 text-white font-bold w-1/2 mx-auto block py-2'>
+        <button disabled={carregandoTema} type='submit' className=' text-white bg-gradient-to-br from-[#083344] to-[#22d3ee] hover:bg-gradient-to-bl focus:ring-4 
+      transition duration-300 ease-out focus:outline-none focus:ring-cyan-700 dark:focus:ring-cyan-700
+      font-medium rounded-lg text-sm px-14 py-3 text-centerw-1/2 rounded disabled:bg-slate-200 bg-indigo-400 hover:bg-indigo-800 text-white font-bold w-1/2 mx-auto block py-2'>
           {carregandoTema ? <span>Carregando</span> : id !== undefined ? 'Editar' : 'Cadastrar'}
         </button>
       </form>

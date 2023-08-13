@@ -97,13 +97,13 @@ function FormularioTema() {
   }, [token]);
 
   return (
-    <div className="container flex flex-col items-center justify-center mx-auto">
+    <div className="container flex flex-col items-center justify-center mx-auto text-cyan_950">
       <h1 className="text-4xl text-center my-8">
         {id === undefined ? 'Cadastre um novo tema' : 'Editar tema'}
       </h1>
 
       <form className="w-1/2 flex flex-col gap-4" onSubmit={gerarNovoTema}>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 text-cyan_950" >
           <label htmlFor="descricao">Descrição do tema</label>
           <input
             type="text"
@@ -115,11 +115,14 @@ function FormularioTema() {
           />
         </div>
         <button
-          className="rounded text-slate-100 bg-indigo-400 hover:bg-indigo-800 w-1/2 py-2 mx-auto block"
+          className="text-white bg-gradient-to-br from-[#083344] to-[#22d3ee] hover:bg-gradient-to-b t
+          ext-slate-100 bg-cyan_700 w-full flex items-center justify-center py-2 rounded w-1/3 py-2 mx-auto block"
           type="submit"
         >
           {id === undefined ? 'Cadastrar' : 'Editar'}
         </button>
+
+        
       </form>
     </div>
   );
