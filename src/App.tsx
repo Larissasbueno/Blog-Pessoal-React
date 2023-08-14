@@ -40,6 +40,8 @@ function App() {
               <Route path="/editarPostagem/:id" element={<FormularioPostagem />} />
               <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />
               <Route path="/perfil" element={<Perfil />} />
+              <Route path="/navBar" element={<Navbar />} />
+
             </Routes>
           </div>
           <Footer />
