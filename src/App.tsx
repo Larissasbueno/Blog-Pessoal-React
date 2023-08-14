@@ -14,7 +14,7 @@ import ListaPostagens from './components/postagens/listaPostagens/ListaPostagens
 import FormularioPostagem from './components/postagens/formularioPostagem/FormularioPostagem';
 import Perfil from './pages/perfil/Perfil';
 import DeletarPostagem from './components/postagens/deletarPostagem/DeletarPostagem';
-import Navbar from './components/navbar/Navbar';
+import Navbar from './components/navBar/Navbar';
 
 function App() {
   
